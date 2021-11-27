@@ -8,8 +8,8 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <div className="card-footer fixed-bottom" style={{background: "#102c34", color: 'white'}}>
-                &copy; All Rights are Resurved {new Date().getFullYear()-1} - {new Date().getFullYear()}  
+            <div className="App card-footer fixed-bottom" style={{background: "#102c34", color: 'white'}}>
+                &copy; All Rights Are Reserved {new Date().getFullYear()-1} - {new Date().getFullYear()}  
             </div>
         )
     }

@@ -1,48 +1,80 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <header className="text-gray-600 body-font">
-          <div className="container mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center">
-            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span className="ml-3 text-xl">News Home Page</span>
-            </a>
-            <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-              <a className="mr-5 hover:text-gray-900" href="/">First Link</a>
-              <a className="mr-5 hover:text-gray-900" href="/">Second Link</a>
-              <a className="mr-5 hover:text-gray-900" href="/">Third Link</a>
-              <a className="mr-5 hover:text-gray-900" href="/">Fourth Link</a>
-            </nav>
-            <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-              Button
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-4 h-4 ml-1"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top " style={{backgroundColor:'brown'}}>
+          <div className="container-fluid mx-3">
+            <Link className="navbar-brand" to="/">
+              React News App
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
             </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav me-auto mb-2 mb-lg-0">
+                {/* <Link className="nav-link active" aria-current="page" to="/">
+                  Home
+                </Link> */}
+                <Link className="nav-link active" aria-current="page" to="/">
+                  General
+                </Link>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/business"
+                >
+                  Business
+                </Link>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/entertainment"
+                >
+                  Entertainment
+                </Link>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/health"
+                >
+                  Health
+                </Link>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/science"
+                >
+                  Science
+                </Link>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/sports"
+                >
+                  Sports
+                </Link>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/technology"
+                >
+                  Technology
+                </Link>
+              </div>
+            </div>
           </div>
-        </header>
+        </nav>
       </div>
     );
   }
